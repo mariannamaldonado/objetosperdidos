@@ -1,0 +1,64 @@
+<main>
+  <div class="container p-4">
+    <div class="row">
+    <form method="post" action="/objetos/guardar" enctype="multipart/form-data" class="card card-body" style="display:grid" enctype="multipart/form-data">
+
+      <div class="form-group">
+        <label for="title">Nombre</label>
+        <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" autofocus required>
+      </div>
+
+      <div class="form-group">
+        <label for="title">Ingrese la fecha de localizacion del objeto</label>
+            <input type="date" class="form-control" name="fecha" id="fecha"  min="2021-01-26" max="2022-12-26" 
+              required>
+          </div>
+
+      <div class="form-group">
+        <label for="title">Teléfono</label>
+        <input  class="form-control" name="telefono" id="telefono" placeholder="numero de telefono" value="{{telefono}}" autofocus required>
+      </div>
+
+      <div class="form-group">
+        <label for="title">Título</label>
+        <input name="titulo" id="titulo" type="text" class="form-control" placeholder="titulo del objeto" autofocus required>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Descripción</label>
+        <textarea class="form-control" name="descripcion" id="descripcion" rows="2" required>
+        </textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="image">Foto</label>
+        <input type="file" name="foto" id="foto" class="form-control" placeholder="subir imagen" required>
+      </div> 
+
+
+      <div class="form-group">
+        <input type="submit" value="Guardar" class="btn btn-primary">
+      </div>
+    </form>
+  </div>
+  <div class="col-12">
+    {{#if errores}}
+    <div class="row">
+      <div class="col-12">
+        {{#each errores}}
+        <p>{{error}}</p>
+        {{/each}}
+      </div>
+    </div>
+    {{else}}
+    <div class="row">
+      <div class="col-12">
+        <p>Cita guardada con éxito</p>
+      </div>
+    </div>
+    {{/if}}
+  </div>
+  </div>
+  
+
+</main>

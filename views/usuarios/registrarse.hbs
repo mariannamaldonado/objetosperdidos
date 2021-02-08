@@ -1,0 +1,73 @@
+<main>
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        Registro de usuario nuevo
+      </div>
+      <div class="card-body">
+        <form action="/usuarios/guardar" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" name="name" placeholder="Name" value="{{nombre}}">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" name="email" placeholder="Email" value="{{email}}">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="password" placeholder="Password" value="{{password}}">
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password" value="{{confirm_password}}">
+          </div>
+          <input type="submit" class="btn btn-primary" value=" Registrarse">
+           
+        </form>
+      </div>
+      <div class="row">
+      <div class="col-12">
+        <p>{{mensaje}}</p>
+      </div>
+    </div>
+    </div>
+  </div>
+</div>
+</main>
+
+{{!-- 
+<main>
+<div class="row">
+  <div class="col-md-4 mx-auto">
+    <div class="card">
+      <div class="card-header">
+        Login
+      </div>
+      <div class="card-body">
+        <form action="/usuarios/iniciarsession" method="post">
+          <div class="section">
+              <div class="title">Email</div>
+              <div class="field">
+                   <input type="email" class="form-control" name="email" placeholder="Email" value="{{email}}">
+              </div>
+            </div>
+
+                <div class="section">
+                <div class="title">Contraseña</div>
+                    <div class="field">
+                            <input type="password" class="form-control" name="password" placeholder="Password" value="{{password}}">
+                    </div>
+                </div>
+
+           <input type="submit" class="btn btn-primary" value="Iniciar sesíon">
+           <div class="title">
+              <p><a href="/usuarios/nuevo">Regístrate</a></p>
+            <p><a href="/usuarios/">Olvidaste tu Contraseña</a></p>
+           </div>
+        
+          </button>
+        </form>
+      </div>
+     
+    </div>
+  </div>
+</div>
+</main> --}}

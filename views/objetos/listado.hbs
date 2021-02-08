@@ -1,0 +1,65 @@
+<!-- CUERPO DEL EJERCICIO -->
+<main>
+
+  <div class="card" >
+    <div class="container p-4">
+      <div class="row">
+
+        {{#each objetosPerdidos}}
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-header bg-primary text-white">
+              {{titulo}}
+            </div>
+      
+            <img class="card-img-top" src="/images/objetos/{{foto}}" style="width:100%">
+            <div class="card card-body">
+              {{descripcion}}
+            </div>
+            <div class="card-footer">
+              
+              <a href="/modificar" class="btn btn-primary btn-block">Modificar</a>
+              <a href="/delete" class="btn btn-danger btn-block">
+                Eliminar
+              </a>
+            </div>
+          </div>
+        </div>
+         {{/each}}
+      </div>
+    </div>
+ 
+
+ <script>
+   filtrar.onclick=()=>{
+     let filtro=documento.querySelector('#filtro')
+     console.log("has escrito",filtro.value)
+     fetch('/objetos')
+   }
+ </script>
+  {{!--
+  <div class="card card-body text-center">
+    <p>no hay objetos <a href="/objetos/guardar">Agrega un objeto</a></p>
+  </div> --}}
+   {{!-- </div> --}}
+</main>
+
+{{!-- <!-- CUERPO DEL EJERCICIO -->
+<main>
+  <div class="container">
+    <div class="row">
+      {{#each objetosPerdidos}}
+      <div class="col-6">
+        <div class="row">
+          <div class="col-4">
+            <img src="/images/objetos/{{foto}}" style="width:100%">
+          </div>
+          <div class="col-8">
+            <div>{{titulo}}</div>
+            <div>{{descripcion}}</div>
+          </div>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+</main> --}}
